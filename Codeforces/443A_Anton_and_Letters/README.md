@@ -1,24 +1,16 @@
-443A - Anton and Letters
-
-Codeforces Problem
-
-* Problem Number: 443A
-* Problem Name: Anton and Letters
-* Platform: Codeforces
-* Problem Link: https://codeforces.com/problemset/problem/443/A
-
-Problem Description
-
+# 443A - Anton and Letters
+## Codeforces Problem
+- **Problem Number:** 443A
+- **Problem Name:** Anton and Letters
+- **Platform:** Codeforces
+- **Problem Link:** https://codeforces.com/problemset/problem/443/A
+## Problem Description
 Anton received a string containing lowercase English letters, commas, spaces, and curly braces.
-
-The task is to determine the number of distinct lowercase English letters present in the given set.
-
+The task is to determine the number of **distinct lowercase English letters** present in the given set.
 Each letter should be counted only once, even if it appears multiple times.
-
-Example
-
+## Example
 For the input:
-
+```text
 {a, b, c, a}
 
 The distinct letters are:
@@ -67,9 +59,7 @@ O(26) = O(1)
 
 C++ Solution
 
-The complete implementation is available in:
-
-solution.cpp
+The complete implementation is available in solution.cpp.
 
 The solution uses unordered_set<char> to efficiently store and count distinct lowercase letters.
 
@@ -95,3 +85,12 @@ Therefore:
 st.size()
 
 returns the number of distinct characters.
+
+Now the actual file will contain the literal lines:
+```text
+# 443A - Anton and Letters
+## Codeforces Problem
+## Problem Description
+### unordered_set
+
+exactly as required.
