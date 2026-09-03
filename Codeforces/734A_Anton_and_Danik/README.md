@@ -1,51 +1,99 @@
-734A - Anton and Danik
+# 443A - Anton and Letters
 
-Problem
+## Codeforces Problem
 
-Anton and Danik play a game consisting of n games.
+- **Problem Number:** 443A
+- **Problem Name:** Anton and Letters
+- **Platform:** Codeforces
+- **Problem Link:** https://codeforces.com/problemset/problem/443/A
 
-* If Anton wins a game, the string contains A.
-* If Danik wins a game, the string contains D.
+## Problem Description
 
-Determine who wins the most games.
+Anton received a string containing lowercase English letters, commas, spaces, and curly braces.
 
-If both win the same number of games, print Friendship.
+The task is to determine the number of **distinct lowercase English letters** present in the given set.
 
-Approach
+Each letter should be counted only once, even if it appears multiple times.
 
-1. Read n and the string s.
-2. Count the number of A characters.
-3. The number of D characters is n - countA.
-4. Compare the two counts:
-    * If countA > countD, print Anton.
-    * If countA < countD, print Danik.
-    * Otherwise, print Friendship.
+## Example
 
-Example
+For the input:
 
-For:
+{a, b, c, a}
 
-n = 6
-s = AAAAAA
+The distinct letters are:
 
-Anton wins all 6 games.
+a, b, c
 
-Output:
+Therefore, the answer is:
 
-Anton
+3
 
-C++ Concepts Used
+## Approach
 
-* Strings
-* Loops
-* Character comparison
-* Counting
+The solution uses an `unordered_set<char>` to store all distinct lowercase English letters.
 
-Complexity
+The input is read character by character:
 
-* Time: O(n)
-* Space: O(n) for the input string
+1. Read the first character.
+2. Continue reading characters until the closing curly brace `}` is encountered.
+3. If the current character is a lowercase English letter, insert it into the `unordered_set`.
+4. Since a set stores only unique elements, duplicate letters are automatically ignored.
+5. After processing the entire input, the size of the set gives the number of distinct letters.
 
-Solution
+## Algorithm
 
-See solution.cpp.
+1. Create an empty `unordered_set<char>`.
+2. Read characters from the input.
+3. Continue until `}` is encountered.
+4. For every character:
+   - Check whether it is a lowercase English letter.
+   - If yes, insert it into the set.
+5. Print the size of the set.
+
+## Time Complexity
+
+O(n) average time, where n is the number of characters processed.
+
+Each character is processed once, and insertion into an `unordered_set` takes O(1) average time.
+
+## Space Complexity
+
+O(k) average space, where k is the number of distinct lowercase letters.
+
+Since there are only 26 lowercase English letters:
+
+O(26) = O(1)
+
+## C++ Solution
+
+The complete implementation is available in `solution.cpp`.
+
+The solution uses `unordered_set<char>` to efficiently store and count distinct lowercase letters.
+
+## Key C++ Concept Used
+
+### unordered_set
+
+`unordered_set` is used because it automatically maintains unique elements.
+
+For example:
+
+unordered_set<char> st;
+st.insert('a');
+st.insert('b');
+st.insert('a');
+
+The set contains only:
+
+a, b
+
+Therefore:
+
+st.size()
+
+returns the number of distinct characters.
+
+## Solution
+
+See `solution.cpp`.
